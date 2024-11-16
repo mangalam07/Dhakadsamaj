@@ -5,7 +5,9 @@ import {AllSureName} from '../config';
 import ListData from '../component/ListData';
 import {TotalSureNameCount} from '../config';
 import SearchBar from '../component/SearchBar';
-const SureName = ({navigation}) => {
+import {useNavigation} from '@react-navigation/native';
+const SureName = () => {
+  let navigation = useNavigation();
   const [searchData, setSearchData] = useState([]);
 
   const receiveDataFromChild = data => {
@@ -22,7 +24,6 @@ const SureName = ({navigation}) => {
     setSearchData(filteredArray);
   };
 
-  console.log('searchData', searchData);
   return (
     <>
       <Header
@@ -30,9 +31,11 @@ const SureName = ({navigation}) => {
         MainHeading={'List of SubCast'}
         Other={TotalSureNameCount}
       />
-      <SearchBar 
-      onPress={()=> navigation.navigate('developer@details')}
-      UserSearchName={UserSearch} Placeholder={'Find your SubCast here'}/>
+      <SearchBar
+        // onPress={()=> navigation.navigate('developer@details')}
+        UserSearchName={UserSearch}
+        Placeholder={'Find your SubCast here'}
+      />
       <ScrollView style={{paddingHorizontal: 25}}>
         <ListData
           Data={searchData.length ? searchData : AllSureName}

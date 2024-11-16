@@ -1,7 +1,7 @@
 import {
+  Dimensions,
   Image,
   StyleSheet,
-  Text,
   TextInput,
   TouchableOpacity,
   View,
@@ -15,17 +15,19 @@ const SearchBar = ({UserSearchName, Placeholder, onPress}) => {
 
   return (
     <View style={styles.Container}>
-      <TouchableOpacity onPress={onPress}>
-        <Image
-          source={require('../assets/SearchIcon.png')}
-          style={styles.searchicon}
+      <View style={{flexDirection: 'row', alignItems: 'center'}}>
+        <TouchableOpacity onPress={onPress}>
+          <Image
+            source={require('../assets/SearchIcon.png')}
+            style={styles.searchicon}
+          />
+        </TouchableOpacity>
+        <TextInput
+          placeholder={Placeholder}
+          style={styles.inputContainer}
+          onChangeText={item => handleTextSearch(item)}
         />
-      </TouchableOpacity>
-      <TextInput
-        placeholder={Placeholder}
-        style={styles.inputContainer}
-        onChangeText={item => handleTextSearch(item)}
-      />
+      </View>
     </View>
   );
 };
@@ -34,25 +36,27 @@ export default SearchBar;
 
 const styles = StyleSheet.create({
   Container: {
-    marginVertical: 10,
+    padding: 10,
+    width: Dimensions.get('screen').width / 1.25,
+    bottom: 30,
     alignSelf: 'center',
-    flexDirection: 'row',
-    backgroundColor: '#c0eded',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '80%',
-    borderRadius: 60,
+    backgroundColor: '#D0DAD8',
+    borderRadius: 18,
     paddingHorizontal: 30,
+    justifyContent: 'center',
+    // marginVertical: 10,
+    // width: '80%',
+    // flexDirection: 'row',
+    // alignItems: 'center',
   },
 
   inputContainer: {
     paddingHorizontal: 10,
-    fontSize: 19,
-    fontWeight: '400',
+    fontSize: 16,
   },
   searchicon: {
-    height: 32,
-    width: 32,
+    height: 20,
+    width: 20,
     resizeMode: 'center',
   },
 });

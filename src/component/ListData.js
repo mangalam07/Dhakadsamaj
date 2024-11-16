@@ -20,9 +20,10 @@ const ListData = ({
   return (
     <View>
       {Data?.map((item, index, arrlength) => {
-        console.log('DATA_LENGTH', arrlength?.length);
+        // console.log('DATA_LENGTH', arrlength?.length);
         return (
           <TouchableOpacity
+            activeOpacity={0.8}
             key={index}
             style={[styles.listView, style]}
             onPress={() => sendDataToParentHandler(item)}>
@@ -52,26 +53,26 @@ export default ListData;
 
 const styles = StyleSheet.create({
   listView: {
-    paddingHorizontal: 15,
-    marginVertical: 15,
     flexDirection: 'row',
-    // backgroundColor: '#07e36a',
-    backgroundColor: '#195190FF',
-    // justifyContent: 'center',
-    height: 80,
+    marginVertical: 15,
+    paddingHorizontal: 8,
+    height: 65,
+    backgroundColor: '#C0C0FE',
     borderRadius: 8,
-    shadowColor: 'blue',
-    shadowOpacity: 10,
-    shadowOffset: {width: 2, height: 2},
-    shadowRadius: 9,
-    elevation: 12,
-    opacity: 10,
+    elevation: 5,
+    // backgroundColor: '#07e36a',
+    // paddingHorizontal: 15,
+    // // justifyContent: 'center',
+    // shadowColor: 'blue',
+    // shadowOpacity: 10,
+    // // shadowOffset: {width: 2, height: 2},
+    // // shadowRadius: 9,
+    // opacity: 10,
   },
   listfonts: {
     fontSize: 25,
     fontWeight: '700',
-    color: '#FAEBEFFF',
-    // color: '#44ebd7',
+    color: '#0B2D99',
     alignSelf: 'center',
   },
   countbox: {

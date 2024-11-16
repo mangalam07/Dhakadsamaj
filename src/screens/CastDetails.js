@@ -2,72 +2,58 @@ import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
 import Header from '../component/Header';
 import ListData from '../component/ListData';
-import {
-  SagitraFamily,
-  MehtaFamily,
-  GargamaFamily,
-  DhodhariyaFamily,
-  AilyaFamily,
-  PapondiyaFamily,
-  NanderaFamily,
-  SekwadiyaFamily,
-  AtoliyaFamily,
-  GajiFamily,
-  BamboriyaFamily,
-  AloliyaFamily,
-  HarraFamily,
-  VarvaniyaFamily,
-  NaymaFamily,
-  VaktariyaFamily,
-  KhamoriyaFamily,
-} from '../config';
+import {familyMap} from '../config';
 import SearchBar from '../component/SearchBar';
+import {useNavigation} from '@react-navigation/native';
 
-const CastDetails = ({navigation, route}) => {
+const CastDetails = ({route}) => {
+
+  let navigation = useNavigation();
   const SureName = route?.params?.name;
   const Total = route?.params?.total;
+  const Id = route?.params?.id;
 
   const [searchName, setSearchName] = useState([]);
 
-  console.log('SureName', SureName);
-  const selectData =
-    SureName == 'Sagitra'
-      ? SagitraFamily
-      : SureName == 'Mehta'
-      ? MehtaFamily
-      : SureName == 'Gargama'
-      ? GargamaFamily
-      : SureName == 'Dhodhariya'
-      ? DhodhariyaFamily
-      : SureName == 'Ailya'
-      ? AilyaFamily
-      : SureName == 'Nayma'
-      ? NaymaFamily
-      : SureName == 'Vaktariya'
-      ? VaktariyaFamily
-      : SureName == 'Papondiya'
-      ? PapondiyaFamily
-      : SureName == 'Khamoriya'
-      ? KhamoriyaFamily
-      : SureName == 'Varvaniya'
-      ? VarvaniyaFamily
-      : SureName == 'Nandera'
-      ? NanderaFamily
-      : SureName == 'Sekwadiya'
-      ? SekwadiyaFamily
-      : SureName == 'Aloliya'
-      ? AloliyaFamily
-      : SureName == 'Gaji'
-      ? GajiFamily
-      : SureName == 'Bamboriya'
-      ? BamboriyaFamily
-      : SureName == 'Atoliya'
-      ? AtoliyaFamily
-      : SureName == 'Harra'
-      ? HarraFamily
-      : [];
+  // console.log('SureName', SureName);
+  // const selectData =
+  //   SureName == 'Sagitra'
+  //     ? SagitraFamily
+  //     : SureName == 'Mehta'
+  //     ? MehtaFamily
+  //     : SureName == 'Gargama'
+  //     ? GargamaFamily
+  //     : SureName == 'Dhodhariya'
+  //     ? DhodhariyaFamily
+  //     : SureName == 'Ailya'
+  //     ? AilyaFamily
+  //     : SureName == 'Nayma'
+  //     ? NaymaFamily
+  //     : SureName == 'Vaktariya'
+  //     ? VaktariyaFamily
+  //     : SureName == 'Papondiya'
+  //     ? PapondiyaFamily
+  //     : SureName == 'Khamoriya'
+  //     ? KhamoriyaFamily
+  //     : SureName == 'Varvaniya'
+  //     ? VarvaniyaFamily
+  //     : SureName == 'Nandera'
+  //     ? NanderaFamily
+  //     : SureName == 'Sekwadiya'
+  //     ? SekwadiyaFamily
+  //     : SureName == 'Aloliya'
+  //     ? AloliyaFamily
+  //     : SureName == 'Gaji'
+  //     ? GajiFamily
+  //     : SureName == 'Bamboriya'
+  //     ? BamboriyaFamily
+  //     : SureName == 'Atoliya'
+  //     ? AtoliyaFamily
+  //     : SureName == 'Harra'
+  //     ? HarraFamily
+  //     : [];
 
-  console.log('selectData', selectData?.length);
+  const selectData = familyMap[Id] || [];
 
   const receiveDataFromChild = data => {
     navigation.navigate('family@details', data);
@@ -91,7 +77,7 @@ const CastDetails = ({navigation, route}) => {
         MainHeading={`${SureName} ${'Family'}`}
       />
       <SearchBar
-        onPress={()=> navigation.navigate('developer@details')}
+        onPress={() => navigation.navigate('developer@details')}
         UserSearchName={UserSearch}
         Placeholder={'Find your Name here'}
       />

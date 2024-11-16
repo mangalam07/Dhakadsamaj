@@ -19,70 +19,87 @@ export const AllSureName = [
   {
     name: 'Sagitra',
     total: '85',
+    id: '1',
   },
   {
     name: 'Mehta',
     total: '60',
+    id: '2',
   },
   {
     name: 'Gargama',
     total: '34',
+    id: '3',
   },
   {
     name: 'Dhodhariya',
     total: '15',
+    id: '4',
   },
   {
     name: 'Ailya',
     total: '10',
+    id: '5',
   },
   {
     name: 'Papondiya',
     total: '01',
+    id: '6',
   },
   {
     name: 'Khamoriya',
     total: '15',
+    id: '7',
   },
   {
     name: 'Nayma',
     total: '06',
+    id: '8',
   },
   {
     name: 'Vaktariya',
     total: '04',
+    id: '9',
   },
   {
     name: 'Varvaniya',
     total: '07',
+    id: '10',
   },
   {
     name: 'Nandera',
     total: '07',
+    id: '11',
   },
   {
     name: 'Sekwadiya',
     total: '05',
+    id: '12',
   },
   {
     name: 'Atoliya',
     total: '05',
+    id: '13',
   },
   {
     name: 'Gaji',
     total: '03',
+    id: '14',
   },
   {
     name: 'Bamboriya',
     total: '02',
+    id: '15',
   },
   {
     name: 'Aloliya',
     total: '02',
+    id: '16',
   },
   {
     name: 'Harra',
     total: '01',
+    id: '16',
   },
 ];
 
@@ -267,7 +284,7 @@ export const SagitraFamily = [
           name: 'Saransh',
           relation: G_S,
           Age: '10',
-          Occuption: S_T
+          Occuption: S_T,
         },
       ],
     },
@@ -484,32 +501,32 @@ export const SagitraFamily = [
         {
           name: 'Radha',
           relation: DAUGHTER,
-          Age: '19'
+          Age: '19',
         },
         {
           name: 'Khushi',
           relation: DAUGHTER,
-          Age: '17'
+          Age: '17',
         },
         {
           name: 'Archana',
           relation: DAUGHTER,
-          Age: '14'
+          Age: '14',
         },
         {
           name: 'Shree',
           relation: DAUGHTER,
-          Age:'09'
+          Age: '09',
         },
         {
           name: 'Dipanjali',
           relation: DAUGHTER,
-          Age:'06'
+          Age: '06',
         },
         {
           name: 'Harsh',
           relation: SON,
-          Age:'02'
+          Age: '02',
         },
       ],
     },
@@ -522,8 +539,8 @@ export const SagitraFamily = [
       surename: 'Sagitra',
       totalfamilyMember: '04',
       contact: '7000049756',
-      Age:'43',
-      Occuption:F_R,
+      Age: '43',
+      Occuption: F_R,
       nameOfFamilyMember: [
         {
           name: 'SavitriBai',
@@ -545,7 +562,7 @@ export const SagitraFamily = [
           name: 'Sumit',
           relation: SON,
           Age: '17',
-          Occuption:F_R
+          Occuption: F_R,
         },
       ],
     },
@@ -572,8 +589,8 @@ export const SagitraFamily = [
         {
           name: 'Vasudev',
           relation: SON,
-          Occuption:'Private-Teacher',
-          Age: '30'
+          Occuption: 'Private-Teacher',
+          Age: '30',
         },
         {
           name: 'Manju',
@@ -595,7 +612,7 @@ export const SagitraFamily = [
       totalfamilyMember: '01',
       Occuption: F_R,
       Age: '51',
-      contact: '8770090539'
+      contact: '8770090539',
     },
   },
 
@@ -607,7 +624,7 @@ export const SagitraFamily = [
       totalfamilyMember: '02',
       Occuption: G_W,
       Age: '61',
-      contact : '9685516133',
+      contact: '9685516133',
       nameOfFamilyMember: [
         {
           name: 'GeetaBai',
@@ -629,19 +646,19 @@ export const SagitraFamily = [
       totalfamilyMember: '13',
       Age: '75',
       Occuption: 'Buisness',
-      contact:'7697336501',
+      contact: '7697336501',
       nameOfFamilyMember: [
         {
           name: 'Radheshyam',
           relation: SON,
-          Age:'65',
-          Occuption:F_R
+          Age: '65',
+          Occuption: F_R,
         },
         {
           name: 'Suresh',
           relation: SON,
           Age: '40',
-          Occuption:'Buisness'
+          Occuption: 'Buisness',
         },
         {
           name: 'Krishna',
@@ -655,13 +672,13 @@ export const SagitraFamily = [
           name: 'Jatin',
           relation: G_S,
           Age: '18',
-          Occuption: F_R
+          Occuption: F_R,
         },
         {
           name: 'Disha',
           relation: G_S,
           Age: '15',
-          Occuption:S_T
+          Occuption: S_T,
         },
         {
           name: 'Balmukund',
@@ -748,7 +765,7 @@ export const SagitraFamily = [
           name: 'Ranjit',
           relation: SON,
           Age: '55',
-          Occuption: F_R
+          Occuption: F_R,
         },
         {
           name: 'Koushalya',
@@ -762,7 +779,7 @@ export const SagitraFamily = [
           name: 'Vinod',
           relation: G_S,
           Age: '32',
-          Occuption: F_R
+          Occuption: F_R,
         },
         {
           name: 'Priyanka',
@@ -780,7 +797,7 @@ export const SagitraFamily = [
         {
           name: 'Sanidhya',
           relation: G_D,
-          Age: '03'
+          Age: '03',
         },
       ],
     },
@@ -848,7 +865,7 @@ export const SagitraFamily = [
       totalfamilyMember: '10',
       nameOfFamilyMember: [
         {
-          name: 'Not found',
+          name: '',
           relation: WIFE,
         },
         {
@@ -872,11 +889,11 @@ export const SagitraFamily = [
           relation: G_S,
         },
         {
-          name: 'Not found',
+          name: '',
           relation: G_D,
         },
         {
-          name: 'Not found',
+          name: '',
           relation: G_D,
         },
         {
@@ -895,7 +912,7 @@ export const SagitraFamily = [
       totalfamilyMember: '8',
       nameOfFamilyMember: [
         {
-          name: 'Not found',
+          name: '',
           relation: WIFE,
         },
         {
@@ -915,11 +932,11 @@ export const SagitraFamily = [
           relation: D_A_L,
         },
         {
-          name: 'Not found',
+          name: '',
           relation: G_S,
         },
         {
-          name: 'Not found',
+          name: '',
           relation: G_S,
         },
       ],
@@ -934,7 +951,7 @@ export const SagitraFamily = [
       totalfamilyMember: '5',
       nameOfFamilyMember: [
         {
-          name: 'Not Found',
+          name: '',
           relation: WIFE,
         },
         {
@@ -942,11 +959,11 @@ export const SagitraFamily = [
           relation: SON,
         },
         {
-          name: 'Not found',
+          name: '',
           relation: D_A_L,
         },
         {
-          name: 'Not found',
+          name: '',
           relation: G_S,
         },
       ],
@@ -1874,10 +1891,10 @@ export const MehtaFamily = [
 export const GargamaFamily = [
   {
     name: 'Ramnivas s/o Motiram',
-      description: {
-        contact: '8458991057',
-        totalfamilyMember: '10',
-      },
+    description: {
+      contact: '8458991057',
+      totalfamilyMember: '10',
+    },
   },
   {
     name: 'Samrath s/o Ratanlal',
@@ -2754,3 +2771,24 @@ export const HarraFamily = [
   //   name : '',
   // },
 ];
+
+export const familyMap = {
+  1: SagitraFamily,
+  2: MehtaFamily,
+  3: GargamaFamily,
+  4: DhodhariyaFamily,
+  5: AilyaFamily,
+  6: NaymaFamily,
+  7: VaktariyaFamily,
+  8: PapondiyaFamily,
+  9: KhamoriyaFamily,
+  10: VarvaniyaFamily,
+  11: NanderaFamily,
+  12: SekwadiyaFamily,
+  13: AloliyaFamily,
+  14: GajiFamily,
+  15: BamboriyaFamily,
+  16: AtoliyaFamily,
+  17: HarraFamily,
+  // Add more families if needed
+};

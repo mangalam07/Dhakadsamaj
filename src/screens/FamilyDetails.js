@@ -8,8 +8,10 @@ import {
 } from 'react-native';
 import React from 'react';
 import Header from '../component/Header';
+import {useNavigation} from '@react-navigation/native';
 
-const FamilyDetails = ({navigation, route}) => {
+const FamilyDetails = ({route}) => {
+  let navigation = useNavigation();
   const familyDescription = route?.params?.name;
   const surename = route?.params?.description?.surename;
   const totalfamilyMember = route?.params?.description?.totalfamilyMember;
@@ -35,7 +37,9 @@ const FamilyDetails = ({navigation, route}) => {
             justifyContent: 'center',
             alignItems: 'center',
           }}>
-          <Text style={{color: 'red',fontSize: 30, fontWeight: '900'}}>Data Not Found</Text>
+          <Text style={{color: 'red', fontSize: 30, fontWeight: '900'}}>
+            Data Not Found
+          </Text>
         </View>
       ) : (
         <>
@@ -48,9 +52,12 @@ const FamilyDetails = ({navigation, route}) => {
           ) : (
             <Image
               source={route?.params?.description?.image}
-              style={[styles.profile,{
-                height: 290,
-              }]}
+              style={[
+                styles.profile,
+                {
+                  height: 290,
+                },
+              ]}
             />
           )}
           {/* totalfamilyMember */}
@@ -96,9 +103,7 @@ const FamilyDetails = ({navigation, route}) => {
             </View>
           )}
           {/* address */}
-          {!address ? (
-            <></>
-          ) : (
+          {!address ? null : (
             <View style={styles.totalMember}>
               <Text style={styles.totalMember_font}>Address</Text>
               <Text style={styles.totalMember_font}>:</Text>
@@ -107,15 +112,21 @@ const FamilyDetails = ({navigation, route}) => {
           )}
           <ScrollView style={styles.familymemberlist}>
             {familyMemberName?.map((item, index) => {
+              console.log('item?.name', item?.name);
               return (
                 <TouchableOpacity
                   key={index}
                   style={styles.memberContainer}
                   onPress={() => navigation.navigate('member@details', item)}>
-                  <Text
-                    style={
-                      styles.memberFont
-                    }>{`${item?.name} ${surename}`}</Text>
+                  {!item?.name ? (
+                    <Text style={[styles.memberFont, {color: 'red'}]}>
+                      Unknown
+                    </Text>
+                  ) : (
+                    <Text style={styles.memberFont}>
+                      {item?.name ? item?.name : 'Unknown'}
+                    </Text>
+                  )}
                   <Text style={styles.memberFont}>:</Text>
                   <Text style={styles.memberFont}>{item?.relation}</Text>
                 </TouchableOpacity>
